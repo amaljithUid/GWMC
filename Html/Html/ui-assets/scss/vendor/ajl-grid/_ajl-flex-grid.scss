@@ -1,0 +1,334 @@
+$grid-max-column:12;
+//$col-single: auto;
+$col-single: $full/$grid-max-column;
+.ajl-max-container {
+  padding: $null $du*25;
+  min-height: $du*10; //max-width: $du*810;
+  margin: $null auto;
+  @include respond-to($phone) {
+    padding: $null $du*7.5;
+  }
+}
+
+.ajl-container {
+  padding: $null $du*7.5;
+  min-height: $du*10;
+  max-width: $du*585.5;
+  margin: $null auto;
+}
+
+.ajl-center {
+  @include flexbox();
+  @include flex(auto);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include align-content(space-between);
+  max-width: $du*585.5;
+}
+
+.ajl-row {
+  @include flex-direction(row); //@include flex(0 0 auto);
+  @include flex-wrap(wrap); //@include align-content(stretch);
+  @include flexbox();
+  margin-left: -$du*7.5;
+  margin-right: -$du*7.5;
+  min-height: $du*10;
+  box-sizing: border-box;
+  @include respond-to($tablet-portrait) {
+    //margin:$null;
+    // margin: $null;
+  }
+}
+
+.ajl-col-1 {
+  @include flex-basis($col-single);
+  max-width: $col-single;
+}
+
+.ajl-col-2 {
+  @include flex-basis($col-single*2);
+  max-width: $col-single*2;
+}
+
+.ajl-col-3 {
+  @include flex-basis($col-single*3);
+  max-width: $col-single*3;
+}
+
+.ajl-col-4 {
+  @include flex-basis($col-single*4);
+  max-width: $col-single*4;
+}
+
+.ajl-col-5 {
+  @include flex-basis($col-single*5);
+  max-width: $col-single*5;
+}
+
+.ajl-col-6 {
+  @include flex-basis($col-single*6);
+  max-width: $col-single*6;
+}
+
+.ajl-col-7 {
+  @include flex-basis($col-single*7);
+  max-width: $col-single*7;
+}
+
+.ajl-col-8 {
+  @include flex-basis($col-single*8);
+  max-width: $col-single*8;
+}
+
+.ajl-col-9 {
+  @include flex-basis($col-single*9);
+  max-width: $col-single*9;
+}
+
+.ajl-col-10 {
+  @include flex-basis($col-single*10);
+  max-width: $col-single*10;
+}
+
+.ajl-col-11 {
+  @include flex-basis($col-single*11);
+  max-width: $col-single*11;
+}
+
+.ajl-col-12 {
+  @include flex-basis($col-single*12);
+  max-width: $col-single*12;
+}
+
+[class*='mom-col-'] {
+  padding: $null $du*7.5;
+  box-sizing: border-box;
+  position: relative;
+  @include respond-to($phone) {
+    @include flex-basis($col-single*12);
+    max-width: $col-single*12;
+  }
+}
+
+.ajl-col-m-1 {
+  @include flex-basis($col-single);
+  max-width: $col-single;
+}
+
+.ajl-col-m-2 {
+  @include flex-basis($col-single*2);
+  max-width: $col-single*2;
+}
+
+.ajl-col-m-3 {
+  @include flex-basis($col-single*3);
+  max-width: $col-single*3;
+}
+
+.ajl-col-m-4 {
+  @include flex-basis($col-single*4);
+  max-width: $col-single*4;
+}
+
+.ajl-col-m-5 {
+  @include flex-basis($col-single*5);
+  max-width: $col-single*5;
+}
+
+.ajl-col-m-6 {
+  @include flex-basis($col-single*6);
+  max-width: $col-single*6;
+}
+
+.ajl-col-m-7 {
+  @include flex-basis($col-single*7);
+  max-width: $col-single*7;
+}
+
+.ajl-col-m-8 {
+  @include flex-basis($col-single*8);
+  max-width: $col-single*8;
+}
+
+.ajl-col-m-9 {
+  @include flex-basis($col-single*9);
+  max-width: $col-single*9;
+}
+
+.ajl-col-m-10 {
+  @include flex-basis($col-single*10);
+  max-width: $col-single*10;
+}
+
+.ajl-col-m-11 {
+  @include flex-basis($col-single*11);
+  max-width: $col-single*11;
+}
+
+.ajl-col-m-12 {
+  @include flex-basis($col-single*12);
+  max-width: $col-single*12;
+}
+
+// [class*='rb_']{
+//   border: thin dotted red;
+// }
+[class*='mom-col-m-'] {
+  //border-right: thin solid $theme-bright;
+  //border-left: thin solid $theme-bright;
+  @include respond-to($tablet-portrait) {
+    @include flex-basis($col-single*12);
+    max-width: $col-single*12;
+  }
+}
+
+.ajl-col-s-1 {
+  @include flex-basis($col-single);
+  max-width: $col-single;
+}
+
+.ajl-col-s-2 {
+  @include flex-basis($col-single*2);
+  max-width: $col-single*2;
+}
+
+.ajl-col-s-3 {
+  @include flex-basis($col-single*3);
+  max-width: $col-single*3;
+}
+
+.ajl-col-s-4 {
+  @include flex-basis($col-single*4);
+  max-width: $col-single*4;
+}
+
+.ajl-col-s-5 {
+  @include flex-basis($col-single*5);
+  max-width: $col-single*5;
+}
+
+.ajl-col-s-6 {
+  @include flex-basis($col-single*6);
+  max-width: $col-single*6;
+}
+
+.ajl-col-s-7 {
+  @include flex-basis($col-single*7);
+  max-width: $col-single*7;
+}
+
+.ajl-col-s-8 {
+  @include flex-basis($col-single*8);
+  max-width: $col-single*8;
+}
+
+.ajl-col-s-9 {
+  @include flex-basis($col-single*9);
+  max-width: $col-single*9;
+}
+
+.ajl-col-s-10 {
+  @include flex-basis($col-single*10);
+  max-width: $col-single*10;
+}
+
+.ajl-col-s-11 {
+  @include flex-basis($col-single*11);
+  max-width: $col-single*11;
+}
+
+.ajl-col-s-12 {
+  @include flex-basis($col-single*12);
+  max-width: $col-single*12;
+}
+
+[class*='mom-col-s-'] {
+  //border-right: thin solid $theme-bright;
+  //border-left: thin solid $theme-bright;
+  //@include flex(0 0 auto);
+  @include respond-to($phone) {
+    @include flex-basis($col-single*12);
+    max-width: $col-single*12; //border: none;
+  }
+}
+
+.ajl-col-x-1 {
+  @include flex-basis($col-single);
+  max-width: $col-single;
+}
+
+.ajl-col-x-2 {
+  @include flex-basis($col-single*2);
+  max-width: $col-single*2;
+}
+
+.ajl-col-x-3 {
+  @include flex-basis($col-single*3);
+  max-width: $col-single*3;
+}
+
+.ajl-col-x-4 {
+  @include flex-basis($col-single*4);
+  max-width: $col-single*4;
+}
+
+.ajl-col-x-5 {
+  @include flex-basis($col-single*5);
+  max-width: $col-single*5;
+}
+
+.ajl-col-x-6 {
+  @include flex-basis($col-single*6);
+  max-width: $col-single*6;
+}
+
+.ajl-col-x-7 {
+  @include flex-basis($col-single*7);
+  max-width: $col-single*7;
+}
+
+.ajl-col-x-8 {
+  @include flex-basis($col-single*8);
+  max-width: $col-single*8;
+}
+
+.ajl-col-x-9 {
+  @include flex-basis($col-single*9);
+  max-width: $col-single*9;
+}
+
+.ajl-col-x-10 {
+  @include flex-basis($col-single*10);
+  max-width: $col-single*10;
+}
+
+.ajl-col-x-11 {
+  @include flex-basis($col-single*11);
+  max-width: $col-single*11;
+}
+
+.ajl-col-x-12 {
+  @include flex-basis($col-single*12);
+  max-width: $col-single*12;
+}
+
+// [class*='rb-col-x-']{
+//   border-right: thin solid $theme-bright;
+//   border-left: thin solid $theme-bright;
+//   @include respond-to($tablet-landscape) {
+//     @include flex-basis($col-single*12);
+//     max-width:$col-single*12;
+//   }
+// }
+@mixin full-space {
+  margin-left: -$du*15;
+  margin-right: -$du*15;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+// [aria-hidden="true"] { display: none; }
+// [aria-hidden="false"] { display: block; }

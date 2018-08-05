@@ -1,0 +1,72 @@
+<!doctype>
+<html lang="en">
+
+<head>
+  <title>GWMC</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Global Worship Ministries in Christ">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Amaljith Loveson">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="ui-assets/master.min.css">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+    <body>
+
+            
+            <div style="height: 720px; width: 480px;background-image: url(/2017/03/06/20/33/ballerina-2122473_960_720.jpg)";></div>
+            <img src='2017/03/06/20/33/ballerina-2122473_960_720.jpg' />
+    </body>
+
+    <script>
+
+        // $.fn.setImgUrl = function(){
+
+        //     var $eleDiv = $("div");
+        //     var url = $eleDiv.css("backgroundImage").replace(/url\(|\)/g, "");
+            
+        //     $eleDiv.each(function() {
+            
+        //         if(url == 1){
+                    
+        //         }
+               
+        //     });
+            
+
+        // }
+        $(function(){
+
+            //console.log($('div').css("backgroundImage"))
+            // var $src = $("img").attr("src");
+            // var $hostname = "https://cdn.pixabay.com/photo/";
+            // console.log($hostname)
+            // //$('img').attr($hostname + $src);
+            // console.log($('img').attr("src",$hostname));
+
+
+
+            
+
+            //console.log($("div").css('background-image'))
+            // var $eleDiv = $("div");
+            //$('div').css("backgroundImage").replace("2017/","https://cdn.pixabay.com/photo/2017/");
+            // $('img').attr('src',function(i,e){
+            //     return e.replace("2017/","https://cdn.pixabay.com/photo/2017/");
+            // });
+
+            
+            $("div").css('background-image',function(i,e){
+                        return e.replace("2017/","https://cdn.pixabay.com/photo/2017/").replace('file:///E:/',"");
+                    });
+
+            
+
+        });
+    </script>
+
+</html>

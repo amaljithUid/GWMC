@@ -1,0 +1,57 @@
+.our-churches{
+    background:$primary-color;
+    padding-top: $du*30;
+    padding-bottom: $du*30;
+    .section-title{
+        h2{
+            color:$theme-bright;
+        }
+    }
+    .church-list{
+        @include horizontal-block-center;
+	    @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include align-items(stretch);
+        @include align-content(stretch);
+        max-width:$full*1-30;
+        
+        .church{
+            max-width:$full/3;
+            width: $full;
+            margin-top: $du*15;
+            margin-bottom: $du*15;
+            h3{
+                text-align: center;
+                @include theme-font($primary-font, $f-du, $bold, normal, none);
+                color:$theme-bright;
+                padding: $du*2.5 $null;
+            }
+            p{
+                text-align: center;
+                @include theme-font($primary-font, $f-du, $regular, normal, none);
+                padding:$du*2.5 $null $du*10 ;
+                color:$theme-bright;
+            }
+            h6{
+                text-align: center;
+                @include theme-font($primary-font, $f-du, $bold, normal, none);
+                color:$theme-bright;
+                //border-top: solid $du $theme-bright;;
+                padding: $du*10 $null;
+                width: $full*1-20;
+                @include horizontal-block-center;
+                position: relative;
+                &::before{
+                    content: "";
+                    width: $full/4;
+                    height: $du*3;
+                    background-color: $primary-color-2;
+                    @include horizontal-center;
+                    bottom: $full;
+                }
+            }
+        }
+    }
+}

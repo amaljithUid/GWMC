@@ -1,0 +1,88 @@
+header {
+    width: $full;
+    height: $full;
+    nav {
+        display: block;
+        top: $du*5;
+        position: fixed;
+        width: $full;
+        max-width: $full;
+        z-index: 9999;
+        
+        a.brand-logo {
+            display: inline-block;
+            span.brand-name{
+                display: block;
+                clear: both;
+                margin-top: $du*2.5;
+                margin-left: $du*20;
+                @include theme-font($primary-font, $f-du*1-.4, $bold, normal, none);
+                line-height: 1.3;
+                color: $primary-color;
+            }
+        }
+        ul {
+            right: $du*25;
+            display: inline-block;
+            @include vertical-center;
+            li {
+                display: inline-block;
+                a {
+                    padding: $du*10 $du*5;
+                    text-align: center;
+                    display: block;
+                    color: $theme-bright;
+                    @include theme-font($primary-font, $f-du, $bold, normal, none);
+                    
+                }
+            }
+        }
+    }
+    .banner {
+        position: relative;
+        top: $null;
+        width: $full;
+        height: $full;
+        margin-top: $null;
+        display: table;
+        .banner-caption{
+            @include vertical-center;
+            left: $du*25;
+            h2{
+                @include theme-font($primary-font, $f-du*1+15, $bold, normal, none);
+                line-height: .9;
+                color: $primary-color;
+            }
+            h4{
+                @include theme-font($primary-font, $f-du*1+3, $bold, normal, none);
+                line-height: .9;
+                color: $primary-color;  
+            }
+            h6{
+                @include theme-font($primary-font, $f-du/1.2, $bold, normal, none);
+                line-height: 1.3;
+                color: $primary-color;  
+                margin-top: $du*10;
+                padding-top: $du*5;
+                border-top: $du*3 $primary-color solid;
+                display: table;
+            }
+        }
+        .banner-bg-full {
+            float: right;
+            background-image:url(#{$img-path}/banner-shade.png);
+            background-repeat: no-repeat;
+            background-position: (-$du*5) (-$du*10);
+            // max-width: $full/2;
+            background-size: cover;
+            @include respond-to($phone) {
+                background-size: cover;
+                background-position: (-$du*8) (-$du*5);
+            }
+            img{
+                width: $full*1-2;
+                float: right;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.title-b-bottom{
+  border-bottom: $du*2.5 solid $primary-color-2;
+}
+
+.italic{
+  font-style: italic;
+  font-family: georgia;
+}
+
+.no-gutter{
+  [class*='rb-col']{
+    margin:$null;
+    padding: $null;
+  }
+
+}

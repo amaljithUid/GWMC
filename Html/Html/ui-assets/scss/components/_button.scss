@@ -1,0 +1,14 @@
+.ajl-primary-btn {
+    @include button($bg: $secondary-color-3);
+    @include border-radius($du * 3);
+    padding: $du*6.5 $du*8.5;
+    display: inline-block;
+    color: $theme-bright;
+    font-size: $f-du *1 - 1.4;
+    font-family: $primary-font;
+    letter-spacing: $du/2.5;
+    border: none;
+    @include respond-to($medium-desktop) {
+        font-size: $f-du *1 - 1.6; // padding: $du*5 $du*7;
+    }
+}

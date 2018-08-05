@@ -1,0 +1,37 @@
+.bg-pattern{
+    background-image:url(#{$img-path}/bg-pattern.jpg);
+    background-attachment: fixed;
+    
+}
+
+.section-title{
+    h2{
+        @include theme-font($primary-font, $f-du*1+1, $bold, normal, none);
+        @include horizontal-block-center;
+        padding:$du*10 $du*20;
+        position: relative;
+        color: $primary-color;
+        &::after{
+            content: "";
+            width: $full/4;
+            height: $du*3;
+            background-color: $primary-color-2;
+            @include horizontal-center;
+            bottom: $null;
+        }
+    }
+}
+
+.section-intro{
+    
+    width: $full/2;
+    @include horizontal-block-center;
+    margin-top: $du*30;
+    margin-bottom: $du*30;
+    p{
+        @include theme-font($primary-font, $f-du, $bold, normal, none);
+        color: $primary-color;
+        text-align: center;
+        line-height: 1.7;
+    }
+}

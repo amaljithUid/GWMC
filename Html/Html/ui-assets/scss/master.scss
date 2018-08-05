@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+//Abstracts
+@import "abstracts/__abstracts-dir";
+
+
+//External file imports
+@import "imports-dir";
+
+//Base Styles
+@import "base/__base-dir";
+
+
+//Vendor
+@import "vendor/__vendor-dir";
+
+
+//Components
+@import "components/__components-dir";
+
+
+//Layout
+@import "layouts/__layouts-dir";

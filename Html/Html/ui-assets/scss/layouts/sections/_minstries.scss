@@ -1,0 +1,63 @@
+.our-ministries{
+    
+    margin-top: $du*20;
+    margin-bottom: $du*20;
+    .ministries-list{
+        //display: flex;
+        @include horizontal-block-center;
+	    @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include align-items(stretch);
+        @include align-content(stretch);
+        max-width: 60%;
+        position: relative;
+        .ministries-item{
+            //border: solid $du $primary-color;
+            // border-left:solid $du/2 $primary-color;
+            // border-bottom:solid $du/2 $primary-color;
+            position: relative;
+            h3{
+                @include theme-font($primary-font, $f-du, $bold, normal, none);
+                padding: $du*12.5;
+                border: solid $du $primary-color;
+                color:$primary-color;
+                &:hover{
+                    background: $primary-color;
+                    color: $theme-bright;
+                }
+                // border-right:solid $du/2 $primary-color;
+                // border-top:solid $du/2 $primary-color;
+            }
+            .expansion{
+                @include digonalgradient(-210deg, $primary-color,$primary-color-2);
+                @include border-radius($du*3);
+                @include horizontal-center;
+                @include slideInUp(1ms);
+               // @include transform-origin(-50% top);
+                // height: $du*210;
+                width: $null;
+                bottom: $full;
+                display: none;
+                padding: $du*10;
+                margin-left: -$full*1+12;
+                p{
+                    @include theme-font($primary-font, $f-du, $regular, normal, none);
+                    color: $theme-bright;
+                }
+            }
+            &.open{
+                .expansion{
+                    display: table;
+                    width: $du*180;
+                   
+                }
+                h3{
+                    background: $primary-color;
+                    color: $theme-bright;
+                }
+            }
+        }
+    }
+}
