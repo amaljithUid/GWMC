@@ -10,4 +10,14 @@ $.fn.hoverBlock = function() {
 
 $(function(){
     $('.ministries-item').hoverBlock();
+    var options = {
+        controls: true,
+        preload: "auto",
+        loop: false,
+        techOrder: ['youtube', 'html5'],
+        youtube: {
+          ytControls: 0
+        }
+      };
+      
 });

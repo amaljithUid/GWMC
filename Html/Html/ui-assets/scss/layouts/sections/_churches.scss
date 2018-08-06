@@ -1,55 +1,80 @@
 .our-churches{
-    background:$primary-color;
+    // background:$primary-color;
     padding-top: $du*30;
     padding-bottom: $du*30;
+
     .section-title{
         h2{
-            color:$theme-bright;
+            margin-bottom: $du*20;
         }
     }
+    .section-title-float{
+        h2{
+            text-align: right;
+            margin-bottom: $du*7.5;
+            @include theme-font($primary-font, $f-du*1+1, $bold, normal, none);
+            &::after{
+                right: $null;
+            }
+        }
+        p{
+            @include theme-font($primary-font, $f-du, $medium, normal, none);
+            text-align: right;
+            color:$primary-color;
+        }
+        img{
+            width: $du*50;
+            float: right;
+            margin-top: $du*30;
+        }
+    }
+
     .church-list{
         @include horizontal-block-center;
 	    @include flexbox();
         @include flex-direction(row);
         @include flex-wrap(wrap);
-        @include justify-content(center);
+        @include justify-content(flex-start);
         @include align-items(stretch);
         @include align-content(stretch);
         max-width:$full*1-30;
         
         .church{
-            max-width:$full/3;
+            max-width:$full/2;
             width: $full;
-            margin-top: $du*15;
-            margin-bottom: $du*15;
+            margin-top: $du*10;
+            margin-bottom: $du*10;
             h3{
-                text-align: center;
-                @include theme-font($primary-font, $f-du, $bold, normal, none);
-                color:$theme-bright;
+                text-align: left;
+                @include theme-font($primary-font, $f-du*1+.5, $bold, normal, none);
+                color:$primary-color;
                 padding: $du*2.5 $null;
+                padding-top: $null;
             }
             p{
-                text-align: center;
+                text-align: left;
                 @include theme-font($primary-font, $f-du, $regular, normal, none);
-                padding:$du*2.5 $null $du*10 ;
-                color:$theme-bright;
+                padding:$du*2.5 $null ;
+                color:$primary-color;
             }
             h6{
-                text-align: center;
+                text-align: left;
                 @include theme-font($primary-font, $f-du, $bold, normal, none);
-                color:$theme-bright;
+                color:$primary-color;
                 //border-top: solid $du $theme-bright;;
                 padding: $du*10 $null;
+                padding-top: $null;
                 width: $full*1-20;
-                @include horizontal-block-center;
+                //@include horizontal-block-center;
                 position: relative;
-                &::before{
+                &::after{
                     content: "";
-                    width: $full/4;
+                    width: $full/4-15;
                     height: $du*3;
                     background-color: $primary-color-2;
-                    @include horizontal-center;
-                    bottom: $full;
+                    position: absolute;
+                    bottom: $null;
+                    left: $null;
                 }
             }
         }
