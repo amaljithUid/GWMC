@@ -18,6 +18,10 @@
             // border-left:solid $du/2 $primary-color;
             // border-bottom:solid $du/2 $primary-color;
             position: relative;
+            @include respond-to($phone) {
+                width: $full;
+                text-align: center;
+            }
             h3{
                 @include theme-font($primary-font, $f-du, $bold, normal, none);
                 padding: $du*12.5;
@@ -42,16 +46,23 @@
                 display: none;
                 padding: $du*10;
                 margin-left: -$full*1+12;
+                
                 p{
                     @include theme-font($primary-font, $f-du, $regular, normal, none);
                     color: $theme-bright;
+                    @include respond-to($phone) {
+                        text-align: center;
+                    }
                 }
             }
             &.open{
                 .expansion{
                     display: table;
                     width: $du*180;
-                   
+                    @include respond-to($phone) {
+                        width: $du*120;
+                       
+                    }
                 }
                 h3{
                     background: $primary-color;

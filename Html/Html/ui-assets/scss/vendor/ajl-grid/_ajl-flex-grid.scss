@@ -101,7 +101,7 @@ $col-single: $full/$grid-max-column;
   max-width: $col-single*12;
 }
 
-[class*='mom-col-'] {
+[class*='ajl-col-'] {
   padding: $null $du*7.5;
   box-sizing: border-box;
   position: relative;
@@ -174,7 +174,7 @@ $col-single: $full/$grid-max-column;
 // [class*='rb_']{
 //   border: thin dotted red;
 // }
-[class*='mom-col-m-'] {
+[class*='ajl-col-m-'] {
   //border-right: thin solid $theme-bright;
   //border-left: thin solid $theme-bright;
   @include respond-to($tablet-portrait) {
@@ -243,7 +243,7 @@ $col-single: $full/$grid-max-column;
   max-width: $col-single*12;
 }
 
-[class*='mom-col-s-'] {
+[class*='ajl-col-s-'] {
   //border-right: thin solid $theme-bright;
   //border-left: thin solid $theme-bright;
   //@include flex(0 0 auto);

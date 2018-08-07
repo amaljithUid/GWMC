@@ -15,17 +15,31 @@
             @include theme-font($primary-font, $f-du*1+1, $bold, normal, none);
             &::after{
                 right: $null;
+                @include respond-to($phone) {
+                   @include horizontal-center;
+                }
+            }
+            @include respond-to($phone) {
+                text-align: center;
             }
         }
         p{
             @include theme-font($primary-font, $f-du, $medium, normal, none);
             text-align: right;
             color:$primary-color;
+            @include respond-to($phone) {
+                text-align: center;
+            }
         }
         img{
             width: $du*50;
             float: right;
             margin-top: $du*30;
+            @include respond-to($phone) {
+                @include horizontal-block-center;
+                float: inherit;
+                margin-top: $du*7.5;
+            }
         }
     }
 
@@ -38,12 +52,18 @@
         @include align-items(stretch);
         @include align-content(stretch);
         max-width:$full*1-30;
+        @include respond-to($phone) {
+            max-width:$full*1-10; 
+        }
         
         .church{
             max-width:$full/2;
             width: $full;
             margin-top: $du*10;
             margin-bottom: $du*10;
+            @include respond-to($phone) {
+                max-width:$full;
+            }
             h3{
                 text-align: left;
                 @include theme-font($primary-font, $f-du*1+.5, $bold, normal, none);
