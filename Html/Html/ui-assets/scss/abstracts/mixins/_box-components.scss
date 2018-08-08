@@ -45,6 +45,10 @@
   @include transform(translate($x,$y));
 }
 
+@mixin translateX($x) {
+  @include transform(translateX($x));
+}
+
 @mixin transform-origin($x,$y) {
   @include transform(transform-origin($x,$y));
 }

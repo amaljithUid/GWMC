@@ -1,0 +1,57 @@
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; 
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; 
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; 
+}
+
+@mixin mykeyframe ($animation_name) {
+      @-webkit-keyframes $animation_name {
+          @content;
+      }
+
+      @-moz-keyframes $animation_name {
+          @content;
+      }
+
+      @-o-keyframes $animation_name {
+          @content;
+      }
+
+      @keyframes $animation_name {
+          @content;
+      }
+}
+
+/* @include transition(all,2s,ease-out); */
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out, $delayt:1ms) {
+    -webkit-transition: $what $time $how $delayt;
+    -moz-transition:    $what $time $how $delayt;
+    -ms-transition:     $what $time $how $delayt;
+    -o-transition:      $what $time $how $delayt;
+    transition:         $what $time $how $delayt;
+}
+
+@include mykeyframe(zoomIn) {
+    from{
+        width:0px;
+    }
+    to{
+        width:360px;
+    }
+  }

@@ -18,6 +18,8 @@
             // border-left:solid $du/2 $primary-color;
             // border-bottom:solid $du/2 $primary-color;
             position: relative;
+            width: calc(100% * (1/4) - 10px - 1px);
+            flex-grow: 1;
             @include respond-to($phone) {
                 width: $full;
                 text-align: center;
@@ -27,6 +29,7 @@
                 padding: $du*12.5;
                 border: solid $du $primary-color;
                 color:$primary-color;
+                text-align: center;
                 &:hover{
                     background: $primary-color;
                     color: $theme-bright;
@@ -38,18 +41,18 @@
                 @include digonalgradient(-210deg, $primary-color,$primary-color-2);
                 @include border-radius($du*3);
                 @include horizontal-center;
-                @include slideInUp(1ms);
-               // @include transform-origin(-50% top);
-                // height: $du*210;
-                width: $null;
-                bottom: $full;
-                display: none;
-                padding: $du*10;
-                margin-left: -$full*1+12;
-                
+                width: $full/2;
+                bottom: $null;
+                left:$full/2;
+                opacity: 0;
+                height: $du/2;
+                float: right;
+                @include transition(all,200ms,cubic-bezier(0.175, 0.885, 0.32, 1.275),100ms );
                 p{
                     @include theme-font($primary-font, $f-du, $regular, normal, none);
                     color: $theme-bright;
+                    opacity: 0;
+                    @include transition(all,400ms,ease-in-out,400ms);
                     @include respond-to($phone) {
                         text-align: center;
                     }
@@ -57,11 +60,22 @@
             }
             &.open{
                 .expansion{
-                    display: table;
+                    //display: block;
+                    opacity: 1;
                     width: $du*180;
+                    height: $du*108;
+                    padding: $du*20;
+                    bottom: $full;
+                    
+                    left:$full/2;
+
                     @include respond-to($phone) {
                         width: $du*120;
-                       
+                        height: $du*140;
+                    }
+                    p{
+                        
+                        opacity: 1; 
                     }
                 }
                 h3{
